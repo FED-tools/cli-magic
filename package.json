@@ -1,0 +1,25 @@
+{
+  "name": "cli-magic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clone.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-artemhp:FED-tools/cli-magic.git"
+  },
+  "bin": {
+    "cli-magic-clone": "./dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "await-exec": "^0.1.2",
+    "path": "^0.12.7",
+    "winston": "^3.7.2",
+    "yargs": "^17.4.1"
+  }
+}
