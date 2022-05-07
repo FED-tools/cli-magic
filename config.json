@@ -1,0 +1,8 @@
+[
+  {
+    "project": "LMS Platform",
+    "image": "http://localhost:3030/images/lms-platform.png",
+    "repo": "git@github.com:facebook/react.git",
+    "path": "lib/react"
+  }
+]
