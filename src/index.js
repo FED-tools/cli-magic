@@ -9,9 +9,9 @@ import { readFile } from 'fs/promises';
 
 const argv = yargs(hideBin(process.argv));
 
-const pathToConfig = process.cwd() + '/' + argv.argv.config;
-const pathToLog = process.cwd() + '/' + argv.argv.log;
-const pathToProjects = process.cwd() + '/' + argv.argv.src;
+const pathToConfig = process.cwd() + '/' + (argv.argv.config || 'config.json');
+const pathToLog = process.cwd() + '/' + (argv.argv.log || 'logger.log');
+const pathToProjects = process.cwd() + '/' + (argv.argv.src || 'projects');
 
 readFile(new URL(pathToConfig, import.meta.url)).then(jsonFile => {
   const configAllProjects = JSON.parse(jsonFile);
