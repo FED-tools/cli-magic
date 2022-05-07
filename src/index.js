@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
@@ -11,20 +13,18 @@ const pathToConfig = process.cwd() + '/' + argv.argv.config;
 const pathToLog = process.cwd() + '/' + argv.argv.log;
 const pathToProjects = process.cwd() + '/' + argv.argv.src;
 
-const configAllProjects = JSON.parse(
-  await readFile(
-    new URL(pathToConfig, import.meta.url)
-  )
-);
+readFile(new URL(pathToConfig, import.meta.url)).then(jsonFile => {
+  const configAllProjects = JSON.parse(jsonFile);
 
-const log = (text) => {
-  if (argv.argv.log) {
-    logger(pathToLog).log('info', text);
-  }
-};
+  const log = text => {
+    if (argv.argv.log) {
+      logger(pathToLog).log('info', text);
+    }
+  };
 
-clone({
-  list: configAllProjects,
-  path: pathToProjects,
-  log,
+  clone({
+    list: configAllProjects,
+    path: pathToProjects,
+    log,
+  });
 });
