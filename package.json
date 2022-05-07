@@ -1,23 +1,23 @@
 {
-  "name": "cli-magic",
-  "version": "0.0.1",
+  "name": "mgc-cli",
+  "version": "0.0.12",
   "description": "",
   "main": "dist/index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --out-dir dist"
+  },
+  "bin": {
+    "mgc-cli": "./dist/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com-artemhp:FED-tools/cli-magic.git"
   },
-  "bin": {
-    "cli-magic-clone": "./dist/index.js"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.17.9",
     "await-exec": "^0.1.2",
     "path": "^0.12.7",
     "winston": "^3.7.2",
@@ -26,6 +26,10 @@
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.8",
-    "@babel/preset-env": "^7.16.11"
+    "@babel/plugin-transform-async-to-generator": "^7.16.8",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.16.11",
+    "babel-plugin-transform-import-meta": "^2.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0"
   }
 }
