@@ -1,11 +1,19 @@
-# `cli`
+# mgct - Magic Tool
 
-> TODO: description
-
-## Usage
+## Command to Clone all projects from config.json list into projects folder:
 
 ```
-const cli = require('cli');
+npx mgc-cli --config=config.json --log=log.log --src=projects
+```
 
-// TODO: DEMONSTRATE API
+## config.json
+
+```
+[
+  {
+    "project": "React",
+    "repo": "git@github.com:facebook/react.git",
+    "path": "lib/react"
+  }
+]
 ```
