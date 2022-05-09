@@ -7,24 +7,30 @@ import { logger } from './logger/index.js';
 import { clone } from './commands/git-clone.js';
 import { readFile } from 'fs/promises';
 
-const argv = yargs(hideBin(process.argv));
+const argv = yargs(hideBin(process.argv))
+  .demandCommand(1, 'You need at least one command before moving on')
+  .argv;
 
-const pathToConfig = process.cwd() + '/' + (argv.argv.config || 'config.json');
-const pathToLog = process.cwd() + '/' + (argv.argv.log || 'logger.log');
-const pathToProjects = process.cwd() + '/' + (argv.argv.src || 'projects');
+const pathToConfig = process.cwd() + '/' + (argv.config || 'config.json');
+const pathToLog = process.cwd() + '/' + (argv.log || 'logger.log');
+const pathToProjects = process.cwd() + '/' + (argv.src || 'projects');
 
 readFile(new URL(pathToConfig, import.meta.url)).then(jsonFile => {
-  const configAllProjects = JSON.parse(jsonFile);
+  if (argv._[0] == 'create') {
+    const configAllProjects = JSON.parse(jsonFile);
+    const log = text => {
+      if (argv.log) {
+        logger(pathToLog).log('info', text);
+      }
+    };
+    clone({
+      list: configAllProjects,
+      path: pathToProjects,
+      log,
+    });
+    return
+  } else {
+    console.log('Wrong Command')
+  }
 
-  const log = text => {
-    if (argv.argv.log) {
-      logger(pathToLog).log('info', text);
-    }
-  };
-
-  clone({
-    list: configAllProjects,
-    path: pathToProjects,
-    log,
-  });
 });
