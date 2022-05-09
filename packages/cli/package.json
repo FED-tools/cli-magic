@@ -1,6 +1,6 @@
 {
   "name": "mgct",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "",
@@ -18,7 +18,8 @@
   },
   "repository": "git@github.com-artemhp:FED-tools/cli-magic.git",
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "prepublish": "babel src --out-dir lib"
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
