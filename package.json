@@ -1,18 +1,17 @@
 {
-  "name": "mgct",
-  "version": "0.0.16",
-  "npmClient": "npm",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git@github.com-artemhp:FED-tools/cli-magic.git"
-  },
-  "author": "",
+  "author": "Artem Deikun",
   "license": "ISC",
   "devDependencies": {
     "lerna": "^4.0.0"
-  }
+  },
+  "scripts": {
+    "build": "lerna run build",
+    "deploy": "yarn build && lerna publish"
+  },
+  "packageManager": "yarn@3.2.0",
+  "npmClient": "yarn"
 }
