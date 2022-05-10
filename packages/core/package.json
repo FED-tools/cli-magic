@@ -22,7 +22,13 @@
     "prepublish": "babel src --out-dir lib"
   },
   "dependencies": {
+    "await-exec": "^0.1.2",
     "winston": "^3.7.2"
   },
-  "gitHead": "4c08afae79bcf093daf78244dc32781c94521b18"
+  "gitHead": "4c08afae79bcf093daf78244dc32781c94521b18",
+  "devDependencies": {
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
+  }
 }

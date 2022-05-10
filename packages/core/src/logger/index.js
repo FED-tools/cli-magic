@@ -1,11 +1,7 @@
 import { createLogger, format, transports } from 'winston';
 
 const logger = (file) => {
-  const myFormat = format.printf(({ timestamp, level, message, meta }) => {
-    return `${timestamp} | ${level} | ${message};${
-      meta ? JSON.stringify(meta) : ''
-    }`;
-  });
+  const myFormat = format.printf(({ timestamp, level, message, meta }) => `${timestamp} | ${level} | ${message};${meta ? JSON.stringify(meta) : ''}`);
   return createLogger({
     transports: [
       new transports.Console({
