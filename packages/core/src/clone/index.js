@@ -3,23 +3,25 @@ import fs from 'fs';
 
 const clone = async ({ list, path, log }) => {
   let countRepos = 0;
-  let clonedRepos = [];
+  const clonedRepos = [];
   log(`Cloning all repositories (${list.length})`);
-  for await (let el of list) {
+  // eslint-disable-next-line no-restricted-syntax
+  for await (const el of list) {
     const pathCurrent = `${path}/${el.path}`;
+    // eslint-disable-next-line no-plusplus
     log(`Start cloning: (${++countRepos}/${list.length}) ${el.repo} : `);
     try {
       fs.accessSync(pathCurrent, fs.constants.F_OK);
       log(`Repository already exists: ${pathCurrent}`);
     } catch (err) {
       const command = `git clone ${el.repo} ${pathCurrent}`;
-      log('> ' + command);
+      log(`> ${command}`);
       await exec(command);
       log(`Repository has been cloned: ${el.repo}`);
       clonedRepos.push(el.repo);
     }
   }
-  log(`Done cloning all repositories`);
+  log('Done cloning all repositories');
   return {
     count: countRepos,
     repos: clonedRepos,

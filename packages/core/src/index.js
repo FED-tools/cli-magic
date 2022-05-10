@@ -1,4 +1,4 @@
-import { logger } from './logger/index.js';
-import { clone } from './clone/index.js';
+import { logger } from './logger/index';
+import { clone } from './clone/index';
 
 export { logger, clone };
