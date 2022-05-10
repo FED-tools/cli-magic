@@ -1,0 +1,28 @@
+{
+  "name": "@mgct/core",
+  "version": "0.3.0",
+  "description": "> TODO: description",
+  "author": "Artem Deikun <artemhp@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-artemhp:FED-tools/cli-magic.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "prepublish": "babel src --out-dir lib"
+  },
+  "dependencies": {
+    "winston": "^3.7.2"
+  },
+  "gitHead": "4c08afae79bcf093daf78244dc32781c94521b18"
+}
