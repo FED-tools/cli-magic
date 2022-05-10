@@ -3,8 +3,7 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-import { logger } from './logger/index.js';
-import { clone } from './commands/git-clone.js';
+import { logger, clone } from '@mgct/core';
 import { readFile } from 'fs/promises';
 
 const argv = yargs(hideBin(process.argv))
