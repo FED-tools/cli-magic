@@ -9,7 +9,7 @@ const clone = async ({ list, path, log }) => {
   for await (const el of list) {
     const pathCurrent = `${path}/${el.path}`;
     // eslint-disable-next-line no-plusplus
-    log(`Start cloning: (${++countRepos}/${list.length}) ${el.repo} : `);
+    log(`Start cloning: (${++countRepos}/${list.length}) ${el.repo}`);
     try {
       fs.accessSync(pathCurrent, fs.constants.F_OK);
       log(`Repository already exists: ${pathCurrent}`);
