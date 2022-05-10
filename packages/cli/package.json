@@ -37,5 +37,5 @@
     "babel-plugin-transform-import-meta": "^2.1.1",
     "babel-plugin-transform-runtime": "^6.23.0"
   },
-  "gitHead": "4307f30a53e66073ec69244317e4abc7a38989ac"
+  "gitHead": "4c08afae79bcf093daf78244dc32781c94521b18"
 }
