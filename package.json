@@ -9,8 +9,9 @@
     "lerna": "^4.0.0"
   },
   "scripts": {
-    "build": "lerna run build",
-    "deploy": "yarn build && lerna publish"
+    "lerna": "lerna",
+    "build": "lerna exec yarn build",
+    "deploy": "lerna publish"
   },
   "packageManager": "yarn@3.2.0",
   "npmClient": "yarn"

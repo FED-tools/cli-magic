@@ -21,7 +21,7 @@ Create file config.json
 Then run command in the folder where you have **config.json**
 
 ```
-npx mgc-cli create
+npx mgct create
 ```
 
 **Result:**
@@ -32,7 +32,7 @@ Projects that is listed in **config.json** will be cloned from GIT into folder *
 You can customize the location for projects:
 
 ```
-npx mgc-cli create --src=repos
+npx mgct create --src=repos
 ```
 
 **Result:**
@@ -41,7 +41,7 @@ Projects that is listed in **config.json** will be cloned from GIT into specific
 You can customize the config file for projects and source for projects to be cloned:
 
 ```
-npx mgc-cli create --src=repos --config=list.json
+npx mgct create --src=repos --config=list.json
 ```
 
 # Update all projects from GIT to local:
@@ -49,5 +49,5 @@ npx mgc-cli create --src=repos --config=list.json
 To update all projects with latest change - navigate to folder where **config.json** located:
 
 ```
-npx mgc-cli update
+npx mgct update
 ```
