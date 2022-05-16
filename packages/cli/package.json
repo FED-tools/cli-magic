@@ -1,6 +1,6 @@
 {
   "name": "mgct",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "",
@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
-    "@mgct/core": "^0.4.0",
+    "@mgct/core": "^0.4.1",
     "await-exec": "^0.1.2",
     "path": "^0.12.7",
     "winston": "^3.7.2",
