@@ -4,7 +4,7 @@ Magic that will help you with managing repositories.
 
 Set of tools that helps to roll out and maintain GIT repositories of your project or company extremely fast.
 
-## Usage
+# Clone all projects from GIT to local:
 
 Create file config.json
 
@@ -44,3 +44,10 @@ You can customize the config file for projects and source for projects to be clo
 npx mgc-cli create --src=repos --config=list.json
 ```
 
+# Update all projects from GIT to local:
+
+To update all projects with latest change - navigate to folder where **config.json** located:
+
+```
+npx mgc-cli update
+```
