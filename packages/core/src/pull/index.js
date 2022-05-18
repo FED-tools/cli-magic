@@ -9,10 +9,10 @@ const pull = async ({ list, log, path }) => {
     log(`Start Updating: (${++countRepos}/${list.length}) ${el.repo} : `);
     const command = `cd ${path}/${el.path} && git fetch --all`;
     await exec(command);
-    log(`Repository has been cloned: ${el.repo}`);
+    log(`Repository has been updated: ${el.repo}`);
     clonedRepos.push(el.repo);
   }
-  log('Done cloning all repositories');
+  log('Done updating all repositories');
   return {
     count: countRepos,
     repos: clonedRepos,
