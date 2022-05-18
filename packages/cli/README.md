@@ -27,6 +27,21 @@ npx mgct create
 **Result:**
 Projects that is listed in **config.json** will be cloned from GIT into folder **./projects**
 
+# Update all projects from GIT to local:
+
+To update all projects with latest change - navigate to folder where **config.json** located:
+
+```
+npx mgct update
+```
+
+# Show list of commits:
+
+```
+npx mgct commits
+```
+
+
 ## Advanced
 
 You can customize the location for projects:
@@ -42,12 +57,4 @@ You can customize the config file for projects and source for projects to be clo
 
 ```
 npx mgct create --src=repos --config=list.json
-```
-
-# Update all projects from GIT to local:
-
-To update all projects with latest change - navigate to folder where **config.json** located:
-
-```
-npx mgct update
 ```
