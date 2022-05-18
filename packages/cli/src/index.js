@@ -2,8 +2,7 @@
 
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
-
-import { logger, clone, pull } from '@mgct/core';
+import { logger, clone, pull, commits } from '@mgct/core';
 import { readFile } from 'fs/promises';
 
 const { argv } = yargs(hideBin(process.argv)).demandCommand(1, 'You need at least one command before moving on');
@@ -26,6 +25,14 @@ readFile(new URL(pathToConfig, import.meta.url)).then((jsonFile) => {
     pull({
       list: configAllProjects,
       path: pathToProjects,
+      log,
+    });
+  } else if (argv._[0] === 'commits') {
+    commits({
+      list: configAllProjects,
+      path: pathToProjects,
+      author: 'all',
+      period: 'last 7 days',
       log,
     });
   } else {
