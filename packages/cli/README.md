@@ -41,7 +41,6 @@ npx mgct update
 npx mgct commits
 ```
 
-
 ## Advanced
 
 You can customize the location for projects:
@@ -57,4 +56,22 @@ You can customize the config file for projects and source for projects to be clo
 
 ```
 npx mgct create --src=repos --config=list.json
+```
+
+# Copy/Paste for checking after deployment
+
+```
+# Step 1 - (Remove previous files)
+rm -rf ~/Desktop/projects
+rm -rf ~/Desktop/config.json
+cd ~/Desktop
+# Step 2 - (Generate Config)
+echo "[{\"project\": \"Bootstrap\", \"repo\": \"git@github.com:twbs/bootstrap.git\", \"path\": \"bootstrap\"}]" > ./config.json
+# Step 3 - (Optionally for cleaning npx cache)
+npx clear-npx-cache
+npx mgct create
+# Step 4 - (Pull GIT projects)
+npx mgct update
+# Step 5 - (See commits list)
+npx mgct commits
 ```
