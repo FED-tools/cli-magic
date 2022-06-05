@@ -3,5 +3,5 @@
 # Publishing
 
 1. Push all changes to master
-2. npm lerna exec yarn build
-3. npm lerna publish
+2. npm run build
+3. npm run deploy
