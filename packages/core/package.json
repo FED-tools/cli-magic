@@ -5,7 +5,8 @@
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/index.js",
+  "type": "module",
+  "main": "./src/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

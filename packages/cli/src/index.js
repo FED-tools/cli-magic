@@ -27,14 +27,27 @@ readFile(new URL(pathToConfig, import.meta.url)).then((jsonFile) => {
       path: pathToProjects,
       log,
     });
-  } else if (argv._[0] === 'commits') {
-    commits({
+  } else if (argv._[0] === 'weekly-status') {
+    const commitsList = commits({
       list: configAllProjects,
       path: pathToProjects,
-      author: 'all',
-      period: 'last 7 days',
+      author: argv.user || 'all',
+      period: argv.period || 'last 5 days',
       log,
     });
+    commitsList.then((list) => {
+      console.log(list);
+      debugger;
+    });
+  } else if (argv._[0] === 'commits') {
+    const commitsList = commits({
+      list: configAllProjects,
+      path: pathToProjects,
+      author: argv.user || 'all',
+      period: argv.period || 'last 7 days',
+      log,
+    });
+    commitsList.then((el) => console.log(el));
   } else {
     // eslint-disable-next-line no-console
     console.log('Wrong Command');
