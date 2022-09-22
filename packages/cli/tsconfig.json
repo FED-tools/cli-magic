@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
-    "target": "es5",
+    "outDir": "./lib",    
+    "module": "es2022",
+    "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "declaration": true,
