@@ -6,10 +6,10 @@
   "author": "Artem Deikun",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.19.0",
+    "eslint": "^8.23.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "lerna": "^5.1.6"
+    "lerna": "^5.5.2"
   },
   "scripts": {
     "lerna": "lerna",
