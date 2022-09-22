@@ -1,6 +1,6 @@
 {
   "name": "@mgct/core",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "> TODO: description",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "",
@@ -21,7 +21,7 @@
   "scripts": {
     "build": "tsc",
     "prepublish": "tsc"
-  },  
+  },
   "dependencies": {
     "await-exec": "^0.1.2",
     "await-exec-typescript": "^0.0.4",

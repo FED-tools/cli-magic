@@ -1,11 +1,11 @@
 {
   "name": "mgct",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "",
   "type": "commonjs",
-  "license": "ISC",  
+  "license": "ISC",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.19.0",
-    "@mgct/core": "^0.7.0",
+    "@mgct/core": "^0.7.1",
     "await-exec": "^0.1.2",
     "path": "^0.12.7",
     "winston": "^3.8.2",
