@@ -1,11 +1,5 @@
-# `core`
+# @mgct/core - library for fetching data from git repositories.
 
-> TODO: description
-
-## Usage
-
-```
-const core = require('core');
-
-// TODO: DEMONSTRATE API
-```
+- clone
+- commits
+- pull
