@@ -1,10 +1,12 @@
 # MGCT - MaGiC Tool
 
+![npms.io (quality)](https://img.shields.io/npms-io/quality-score/mgct)
+
 Magic that will help you with managing repositories.
 
 Set of tools that helps to roll out and maintain GIT repositories of your project or company extremely fast.
 
-# Clone all projects from GIT to local:
+## Clone all projects from GIT to local
 
 Create file config.json
 
@@ -27,7 +29,7 @@ npx mgct create
 **Result:**
 Projects that is listed in **config.json** will be cloned from GIT into folder **./projects**
 
-# Update all projects from GIT to local:
+## Update all projects from GIT to local
 
 To update all projects with latest change - navigate to folder where **config.json** located:
 
@@ -35,13 +37,13 @@ To update all projects with latest change - navigate to folder where **config.js
 npx mgct update
 ```
 
-# Show list of commits:
+## Show list of commits
 
 ```
 npx mgct commits
 ```
 
-## Advanced
+### Advanced
 
 You can customize the location for projects:
 
@@ -54,13 +56,13 @@ Projects that is listed in **config.json** will be cloned from GIT into specific
 
 You can customize the config file for projects and source for projects to be cloned:
 
-```
+```bash
 npx mgct create --src=repos --config=list.json
 ```
 
-# Copy/Paste for checking after deployment
+## Copy/Paste for checking after deployment
 
-```
+```bash
 # Step 1 - (Remove previous files)
 rm -rf ~/Desktop/projects
 rm -rf ~/Desktop/config.json
