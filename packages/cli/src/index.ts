@@ -36,6 +36,7 @@ readFile(new URL(pathToConfig, import.meta.url)).then((jsonFile) => {
       log,
     });
     commitsList.then((list) => {
+      // eslint-disable-next-line no-console
       console.log(list);
     });
   } else if (argv._[0] === 'commits') {
