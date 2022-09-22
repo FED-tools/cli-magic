@@ -16,7 +16,7 @@
     "inst": "lerna exec yarn install",
     "build": "lerna exec yarn build",
     "deploy": "lerna publish",
-    "debug": "node ./packages/cli/src/index.js"
+    "debug": "node ./packages/cli/lib/index.js"
   },
   "packageManager": "yarn@3.2.0",
   "npmClient": "yarn"
