@@ -25,6 +25,7 @@
   "dependencies": {
     "@babel/runtime": "^7.19.0",
     "@mgct/core": "^0.7.1",
+    "@types/yargs": "^17.0.12",
     "await-exec": "^0.1.2",
     "path": "^0.12.7",
     "winston": "^3.8.2",
