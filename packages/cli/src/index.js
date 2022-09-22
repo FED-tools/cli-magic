@@ -37,7 +37,6 @@ readFile(new URL(pathToConfig, import.meta.url)).then((jsonFile) => {
     });
     commitsList.then((list) => {
       console.log(list);
-      debugger;
     });
   } else if (argv._[0] === 'commits') {
     const commitsList = commits({

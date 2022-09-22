@@ -9,10 +9,11 @@
     "eslint": "^8.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "lerna": "^4.0.0"
+    "lerna": "^5.1.6"
   },
   "scripts": {
     "lerna": "lerna",
+    "inst": "lerna exec yarn install",
     "build": "lerna exec yarn build",
     "deploy": "lerna publish",
     "debug": "node ./packages/cli/src/index.js"

@@ -1,9 +1,9 @@
-import { createLogger, format, transports, addColors } from "winston";
+import { createLogger, format, transports, addColors } from 'winston';
 
-const logger = (file) => {
+const logger = (file: any) => {
   const myFormat = format.printf(({ timestamp, level, message }) => `${timestamp} | ${level} | ${message}`);
   addColors({
-    info: "bold yellow",
+    info: 'bold yellow',
   });
   const customFormat = format.combine(
     format.colorize({
@@ -16,13 +16,12 @@ const logger = (file) => {
   return createLogger({
     transports: [
       new transports.Console({
-        filename: file,
-        level: "info",
+        level: 'info',
         format: customFormat,
       }),
       new transports.File({
         filename: file,
-        level: "info",
+        level: 'info',
         format: format.combine(format.timestamp(), format.splat(), myFormat),
       }),
     ],

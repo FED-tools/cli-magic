@@ -1,6 +1,13 @@
-import exec from 'await-exec';
+import exec from 'await-exec-typescript';
+import { TItemRepo } from '..';
 
-const pull = async ({ list, log, path }) => {
+type TPullProps = {
+  list: TItemRepo[];
+  path: string;
+  log: (message: string) => void;
+};
+
+const pull = async ({ list, log, path }: TPullProps) => {
   let countRepos = 0;
   const clonedRepos = [];
   // eslint-disable-next-line no-restricted-syntax
