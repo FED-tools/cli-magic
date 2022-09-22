@@ -10,7 +10,7 @@ Set of tools that helps to roll out and maintain GIT repositories of your projec
 
 Create file config.json
 
-```
+```json
 [
   {
     "project": "React",
@@ -22,7 +22,7 @@ Create file config.json
 
 Then run command in the folder where you have **config.json**
 
-```
+```bash
 npx mgct create
 ```
 
@@ -33,13 +33,13 @@ Projects that is listed in **config.json** will be cloned from GIT into folder *
 
 To update all projects with latest change - navigate to folder where **config.json** located:
 
-```
+```bash
 npx mgct update
 ```
 
 ## Show list of commits
 
-```
+```bash
 npx mgct commits
 ```
 
@@ -47,7 +47,7 @@ npx mgct commits
 
 You can customize the location for projects:
 
-```
+```bash
 npx mgct create --src=repos
 ```
 
