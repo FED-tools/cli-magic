@@ -47,6 +47,7 @@ readFile(new URL(pathToConfig, import.meta.url)).then((jsonFile) => {
       period: argv.period || 'last 7 days',
       log,
     });
+    // eslint-disable-next-line no-console
     commitsList.then((el) => console.log(el));
   } else {
     // eslint-disable-next-line no-console
