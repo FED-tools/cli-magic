@@ -14,7 +14,7 @@ const pathToProjects = `${process.cwd()}/${argv.src || 'projects'}`;
 const log = (text) => logger(pathToLog).log('info', text);
 
 readFile(new URL(pathToConfig, import.meta.url)).then((jsonFile) => {
-  const configAllProjects = JSON.parse(jsonFile);
+  const configAllProjects = JSON.parse(String(jsonFile));
   if (argv._[0] === 'create') {
     clone({
       list: configAllProjects,
