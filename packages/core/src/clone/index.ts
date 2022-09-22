@@ -1,7 +1,14 @@
-import exec from 'await-exec';
-import fs from 'fs';
+import exec from 'await-exec-typescript';
+import * as fs from 'fs';
+import {TItemRepo} from '../index';
 
-const clone = async ({ list, path, log }) => {
+type TCloneProps = {
+  list: TItemRepo[];
+  path: string;
+  log: (message: string) => void;
+};
+
+const clone = async ({ list, path, log }:TCloneProps):Promise<{count: number, repos: TItemRepo[]}> => {
   let countRepos = 0;
   const clonedRepos = [];
   log(`Cloning all repositories (${list.length})`);
@@ -18,7 +25,7 @@ const clone = async ({ list, path, log }) => {
       log(`> ${command}`);
       await exec(command);
       log(`Repository has been cloned: ${el.repo}`);
-      clonedRepos.push(el.repo);
+      clonedRepos.push(el);
     }
   }
   log('Done cloning all repositories');
