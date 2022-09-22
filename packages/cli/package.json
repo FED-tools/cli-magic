@@ -4,8 +4,8 @@
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "",
-  "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
+  "license": "ISC",  
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
@@ -41,5 +41,5 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.2"
   },
-  "gitHead": "4c08afae79bcf093daf78244dc32781c94521b18"
+  "gitHead": "4940822b640140b81273fcb8ace07f709b7eb350"
 }

@@ -1688,11 +1688,13 @@
     "npmlog" "^6.0.2"
     "write-file-atomic" "^4.0.1"
 
-"@mgct/core@^0.6.0", "@mgct/core@file:/Users/adeikun/Projects/fed-dashboard/projects/private/mgc/packages/core":
+"@mgct/core@^0.7.0", "@mgct/core@file:/Users/adeikun/Projects/fed-dashboard/projects/private/mgc/packages/core":
   "resolved" "file:packages/core"
-  "version" "0.6.0"
+  "version" "0.7.0"
   dependencies:
     "await-exec" "^0.1.2"
+    "await-exec-typescript" "^0.0.4"
+    "typescript" "^4.8.3"
     "winston" "^3.7.2"
 
 "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3":
@@ -4393,7 +4395,7 @@
 
 "mgct@file:/Users/adeikun/Projects/fed-dashboard/projects/private/mgc/packages/cli":
   "resolved" "file:packages/cli"
-  "version" "0.6.0"
+  "version" "0.7.0"
   dependencies:
     "@babel/runtime" "^7.17.9"
     "@mgct/core" "^0.6.0"

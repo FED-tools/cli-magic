@@ -107,7 +107,7 @@ type TCommits = {
   path: string;
   period: string;
   author: 'all' | string;
-  output: (data: TGitResponse[] | string) => void;
+  output?: (data: TGitResponse[] | string) => void;
 };
 
 export const commits = async ({ list, log, author, period, path, output }: TCommits) => {
