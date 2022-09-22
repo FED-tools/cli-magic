@@ -26,7 +26,7 @@
     "await-exec": "^0.1.2",
     "await-exec-typescript": "^0.0.4",
     "typescript": "^4.8.3",
-    "winston": "^3.7.2"
+    "winston": "^3.8.2"
   },
   "gitHead": "4c08afae79bcf093daf78244dc32781c94521b18",
   "devDependencies": {
