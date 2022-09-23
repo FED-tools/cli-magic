@@ -1,11 +1,12 @@
 {
   "name": "@mgct/core",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "https://github.com/FED-tools/cli-magic",
   "keywords": [
-    "git", "api"
+    "git",
+    "api"
   ],
   "license": "MIT",
   "type": "commonjs",
