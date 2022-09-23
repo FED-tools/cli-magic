@@ -3,10 +3,14 @@
   "version": "0.7.2",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
-  "homepage": "",
+  "homepage": "https://github.com/FED-tools/cli-magic",
+  "bugs": "https://github.com/FED-tools/cli-magic/issues",
   "type": "commonjs",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/index.js",
+  "keywords": [
+    "cli", "git", "api"
+  ],
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -17,10 +21,17 @@
   "bin": {
     "mgct": "./lib/index.js"
   },
-  "repository": "git@github.com-artemhp:FED-tools/cli-magic.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:FED-tools/cli-magic.git",
+    "directory": "packages/cli"
+  },
   "scripts": {
     "build": "babel src --out-dir lib",
     "prepublish": "babel src --out-dir lib"
+  },
+  "engines": {
+    "node": ">=14"
   },
   "dependencies": {
     "@babel/runtime": "^7.19.0",

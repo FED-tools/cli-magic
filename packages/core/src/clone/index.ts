@@ -1,6 +1,6 @@
 import exec from 'await-exec-typescript';
 import * as fs from 'fs';
-import {TItemRepo} from '../index';
+import { TItemRepo } from '../index';
 
 type TCloneProps = {
   list: TItemRepo[];
@@ -8,7 +8,7 @@ type TCloneProps = {
   log: (message: string) => void;
 };
 
-const clone = async ({ list, path, log }:TCloneProps):Promise<{count: number, repos: TItemRepo[]}> => {
+const clone = async ({ list, path, log }: TCloneProps): Promise<{ count: number; repos: TItemRepo[] }> => {
   let countRepos = 0;
   const clonedRepos = [];
   log(`Cloning all repositories (${list.length})`);

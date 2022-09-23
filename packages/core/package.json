@@ -1,10 +1,13 @@
 {
   "name": "@mgct/core",
   "version": "0.7.2",
-  "description": "> TODO: description",
+  "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
-  "homepage": "",
-  "license": "ISC",
+  "homepage": "https://github.com/FED-tools/cli-magic",
+  "keywords": [
+    "git", "api"
+  ],
+  "license": "MIT",
   "type": "commonjs",
   "main": "./lib/index.js",
   "directories": {
@@ -16,11 +19,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com-artemhp:FED-tools/cli-magic.git"
+    "url": "git@github.com:FED-tools/cli-magic.git",
+    "directory": "packages/core"
   },
   "scripts": {
     "build": "tsc",
     "prepublish": "tsc"
+  },
+  "engines": {
+    "node": ">=14"
   },
   "dependencies": {
     "await-exec": "^0.1.2",
