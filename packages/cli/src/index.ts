@@ -39,7 +39,7 @@ const parser = yargs(process.argv.slice(2)).options({
       const commitsList = commits({
         list: configAllProjects,
         path: pathToProjects,
-        author: argv.user,        
+        author: argv.user,
         period: argv.period,
         log,
       });
