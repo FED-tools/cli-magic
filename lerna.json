@@ -3,5 +3,9 @@
     "packages/*"
   ],
   "version": "0.7.3",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "lerna-dockerize": {
+    "templateDockerfileName": "Dockerfile.template",
+    "baseDockerfileName": "Dockerfile.base"
+  }
 }
