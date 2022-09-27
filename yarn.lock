@@ -5770,7 +5770,7 @@
 
 "mgct@file:/Users/adeikun/Projects/fed-dashboard/projects/private/mgc/packages/cli":
   "resolved" "file:packages/cli"
-  "version" "0.7.3"
+  "version" "0.7.4"
   dependencies:
     "@babel/runtime" "^7.19.0"
     "@mgct/core" "^0.7.3"
