@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "outDir": "./lib",    
-    "module": "es2022",
-    "moduleResolution": "Node",
-    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "module": "commonjs",    
     "strict": true,
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
   },
   "include": ["./src/**/*"]
 }
