@@ -14,13 +14,17 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run:
-          name: 'Install Yarn'
-          command: 'yarn install && yarn inst && yarn build && yarn deploy'
+      - when:
+          condition:
+            equal: [ main, << pipeline.git.branch >> ]
+          steps:
+            - run:
+                name: 'Install Yarn'
+                command: 'yarn install && yarn inst && yarn build && yarn deploy'
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
+  say-hello-workflow:    
     jobs:
-      - say-hello
+      - say-hello       
