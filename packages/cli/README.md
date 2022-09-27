@@ -1,6 +1,6 @@
 # MGCT - MaGiC Tool
 
-![npms.io (quality)](https://img.shields.io/npms-io/quality-score/mgct)
+[![Codacy Badge](https://img.shields.io/codacy/coverage/d5c10d44cd184248947aa0e615414f94)](https://www.codacy.com/gh/FED-tools/cli-magic/dashboard?utm_source=github.com&utm_medium=referral&utm_content=FED-tools/cli-magic&utm_campaign=Badge_Coverage)
 
 Magic that will help you with managing repositories.
 
