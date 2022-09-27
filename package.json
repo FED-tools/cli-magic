@@ -2,7 +2,7 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ],  
+  ],
   "author": "Artem Deikun",
   "license": "ISC",
   "devDependencies": {
@@ -13,11 +13,15 @@
   },
   "scripts": {
     "lerna": "lerna",
-    "inst": "lerna exec yarn install",    
+    "inst": "lerna exec yarn install",
     "build": "lerna exec yarn build",
-    "deploy": "lerna publish",
-    "debug": "node ./packages/cli/lib/index.js"
+    "deploy": "lerna publish --conventional-commits",
+    "debug": "node ./packages/cli/lib/index.js",
+    "lerna-dockerize": "lerna-dockerize"
   },
   "packageManager": "yarn@3.2.0",
-  "npmClient": "yarn"
+  "npmClient": "yarn",
+  "dependencies": {
+    "lerna-dockerize": "^1.0.4"
+  }
 }
