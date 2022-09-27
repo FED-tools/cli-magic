@@ -21,7 +21,10 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
-    when: [main, << pipeline.git.branch >>]
+  say-hello-workflow:    
     jobs:
       - say-hello
+      filters:
+            branches:
+              only:
+                - main
