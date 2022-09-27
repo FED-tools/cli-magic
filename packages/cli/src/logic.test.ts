@@ -1,7 +1,31 @@
+import { clone, pull, commits } from '@mgct/core';
 import init from './logic';
 
-test('Test Create', async () => {
+jest.mock('@mgct/core', () => {
+  return {
+    clone: jest.fn(() => Promise.resolve({ count: 1, repos: [] })),
+    pull: jest.fn(() => Promise.resolve({ count: 1, repos: [] })),
+    commits: jest.fn(() => Promise.resolve({ count: 1, repos: [] })),
+  };
+});
+
+test('Clone on Create Should Be Executed', async () => {
   await init('create');
+  expect(clone).toHaveBeenCalled();
+});
+
+test('Pull on Update Should Be Executed', async () => {
+  await init('update');
+  expect(pull).toHaveBeenCalled();
+});
+
+test('Commits list on Commits Should Be Executed', async () => {
+  await init('commits');
+  expect(commits).toHaveBeenCalled();
+});
+
+test('Nothing should break', async () => {
+  await init();
 });
 
 // test('Test Update', async () => {

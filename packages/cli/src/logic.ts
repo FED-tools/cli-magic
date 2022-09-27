@@ -11,13 +11,13 @@ export default async function init(aaa?: string) {
   const projectsList = JSON.parse(String(fs.readFileSync(pathToConfig)));
 
   if (actionCommand === 'create') {
-    await clone({
+    return await clone({
       list: projectsList,
       path: projectsDistPath,
       log: log(pathToLog),
     });
   } else if (actionCommand === 'update') {
-    await pull({
+    return await pull({
       list: projectsList,
       path: projectsDistPath,
       log: log(pathToLog),
@@ -32,6 +32,7 @@ export default async function init(aaa?: string) {
     });
     // eslint-disable-next-line no-console
     console.log(commitsList);
+    return commitsList;
   } else {
     // eslint-disable-next-line no-console
     console.log('Wrong Command');
