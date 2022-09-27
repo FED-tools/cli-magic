@@ -13,7 +13,7 @@
   },
   "scripts": {
     "lerna": "lerna",
-    "inst": "lerna exec yarn install",
+    "inst": "lerna exec yarn install",    
     "build": "lerna exec yarn build",
     "deploy": "lerna publish",
     "debug": "node ./packages/cli/lib/index.js"
