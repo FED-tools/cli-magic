@@ -1,5 +1,5 @@
 {
-  "name": "mgct",
+  "name": "@mgct/cli",
   "version": "0.7.4",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",

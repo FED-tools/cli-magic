@@ -9,18 +9,16 @@
     "eslint": "^8.23.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "lerna": "^5.5.2"
+    "lerna": "^7.1.4"
   },
   "scripts": {
-    "lerna": "lerna",
-    "inst": "lerna exec yarn install",
-    "build": "lerna exec yarn build",
+    "start": "lerna run build,lint",    
+    "inst": "lerna exec npm install",    
     "deploy": "lerna publish --conventional-commits --yes",
     "debug": "node ./packages/cli/lib/index.js",
     "lerna-dockerize": "lerna-dockerize"
-  },
-  "packageManager": "yarn@3.2.0",
-  "npmClient": "yarn",
+  },  
+  "npmClient": "npm",
   "dependencies": {
     "lerna-dockerize": "^1.0.4"
   }

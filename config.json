@@ -1,7 +1,7 @@
 [
   {
     "project": "React",
-    "repo": "git@github.com:facebook/react.git",
+    "repo": "https://github.com/facebook/react.git",
     "path": "react"
   }
 ]
