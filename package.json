@@ -14,7 +14,7 @@
   "scripts": {
     "start": "lerna run build,lint",    
     "inst": "lerna exec npm install",    
-    "deploy": "lerna publish --conventional-commits --yes",
+    "deploy": "lerna publish --no-private --conventional-commits --yes",
     "debug": "node ./packages/cli/lib/index.js",
     "lerna-dockerize": "lerna-dockerize"
   },  
