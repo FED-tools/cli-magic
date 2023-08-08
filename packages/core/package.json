@@ -1,6 +1,6 @@
 {
   "name": "@mgct/core",
-  "version": "0.7.3",
+  "version": "0.7.5",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "https://github.com/FED-tools/cli-magic",
