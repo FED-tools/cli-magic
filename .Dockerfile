@@ -3,8 +3,8 @@
 FROM node:alpine as base
 COPY . /app
 WORKDIR /app
-RUN yarn
-RUN yarn inst
-RUN yarn build
-RUN yarn deploy
+RUN npm install
+RUN npm run inst
+RUN npm run build
+RUN npm run deploy
 COPY ./lerna.json ./
