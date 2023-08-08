@@ -1,6 +1,6 @@
 import { createLogger, format, transports, addColors } from 'winston';
 
-const logger = (file: any) => {
+const logger = (file: string) => {
   const myFormat = format.printf(({ timestamp, level, message }) => `${timestamp} | ${level} | ${message}`);
   addColors({
     info: 'bold yellow',

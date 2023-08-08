@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",    
+    "outDir": "./lib",
     "target": "es6",
-    "module": "commonjs",    
+    "module": "commonjs",
     "strict": true,
     "declaration": true,
     "declarationMap": true,

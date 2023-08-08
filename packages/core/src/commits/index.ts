@@ -2,6 +2,9 @@
 import exec from 'await-exec-typescript';
 import { TItemRepo } from '..';
 
+type TPath = string;
+type TRepo = string;
+
 type TGitRequestedValues = {
   authorName: 'all' | string;
   period: string;
@@ -20,9 +23,6 @@ type TGitResponse = {
   repo: TRepo;
   summary: string;
 };
-
-type TPath = string;
-type TRepo = string;
 
 async function getStats(
   { authorName, period }: TGitRequestedValues,

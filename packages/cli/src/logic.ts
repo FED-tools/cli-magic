@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-
-import { clone, pull, commits } from '@mgct/core';
 import * as fs from 'fs';
+import { clone, pull, commits } from '@mgct/core';
 import { opt } from './configs/options';
 import log from './helpers/log';
 import parseCli from './yargs/parseCli';
@@ -11,18 +10,20 @@ export default async function init(aaa?: string) {
   const projectsList = JSON.parse(String(fs.readFileSync(pathToConfig)));
 
   if (actionCommand === 'create') {
-    return await clone({
+    return clone({
       list: projectsList,
       path: projectsDistPath,
       log: log(pathToLog),
     });
-  } else if (actionCommand === 'update') {
-    return await pull({
+  }
+  if (actionCommand === 'update') {
+    return pull({
       list: projectsList,
       path: projectsDistPath,
       log: log(pathToLog),
     });
-  } else if (actionCommand === 'commits') {
+  }
+  if (actionCommand === 'commits') {
     const commitsList = await commits({
       list: projectsList,
       path: projectsDistPath,
@@ -33,8 +34,9 @@ export default async function init(aaa?: string) {
     // eslint-disable-next-line no-console
     console.log(commitsList);
     return commitsList;
-  } else {
-    // eslint-disable-next-line no-console
-    console.log('Wrong Command');
   }
+
+  // eslint-disable-next-line no-console
+  console.log('Wrong Command');
+  return null;
 }
