@@ -1,6 +1,6 @@
 {
   "name": "@mgct/cli",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "homepage": "https://github.com/FED-tools/cli-magic",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.22.10",
-    "@mgct/core": "^0.7.5",
+    "@mgct/core": "^0.7.6",
     "@types/yargs": "^17.0.24",
     "await-exec": "^0.1.2",
     "lodash": "^4.17.21",
