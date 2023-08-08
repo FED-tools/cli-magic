@@ -1,5 +1,5 @@
 import init from './logic';
 
-(async function () {
+(async function onLoad () {
   await init();
 })();

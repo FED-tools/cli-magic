@@ -1,13 +1,12 @@
 import { clone, pull, commits } from '@mgct/core';
 import init from './logic';
 
-jest.mock('@mgct/core', () => {
-  return {
+jest.mock('@mgct/core', () => ( {
     clone: jest.fn(() => Promise.resolve({ count: 1, repos: [] })),
     pull: jest.fn(() => Promise.resolve({ count: 1, repos: [] })),
     commits: jest.fn(() => Promise.resolve({ count: 1, repos: [] })),
-  };
-});
+  })
+);
 
 test('Clone on Create Should Be Executed', async () => {
   await init('create');
