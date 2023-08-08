@@ -1,5 +1,5 @@
 {
-  "name": "@mgct/cli",
+  "name": "mgct",
   "version": "0.7.6",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
@@ -20,7 +20,7 @@
     "lib"
   ],
   "bin": {
-    "@mgct/cli": "./lib/index.js"
+    "mgct": "./lib/index.js"
   },
   "repository": {
     "type": "git",
