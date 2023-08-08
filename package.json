@@ -6,20 +6,24 @@
   "author": "Artem Deikun",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.23.1",
+    "eslint": "^8.46.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import": "^2.28.0",
     "lerna": "^7.1.4"
   },
   "scripts": {
     "start": "lerna run build,lint",    
     "inst": "lerna exec npm install",    
     "deploy": "lerna publish --no-private --conventional-commits --yes",
-    "debug": "node ./packages/cli/lib/index.js",
+    "debug": "",
     "lerna-dockerize": "lerna-dockerize"
   },  
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "npmClient": "npm",
   "dependencies": {
-    "lerna-dockerize": "^1.0.4"
+    "lerna-dockerize": "^1.0.9"
   }
 }

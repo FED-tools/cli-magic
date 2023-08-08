@@ -3,6 +3,10 @@
   "version": "0.7.5",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "homepage": "https://github.com/FED-tools/cli-magic",
   "keywords": [
     "git",
