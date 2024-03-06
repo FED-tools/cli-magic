@@ -1,4 +1,8 @@
+import { Logger } from 'winston';
 import { logger } from '@mgct/core';
 
-const log = (pathToLog: string) => (text: string) => logger(pathToLog).log('info', text);
-export default log;
+const logs =
+  (pathToLog: string) =>
+  (text: string): Logger =>
+    logger(pathToLog).log('info', text);
+export default logs;
