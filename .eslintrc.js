@@ -27,6 +27,7 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': 'error',
+    'import/no-unresolved': 'ignore',
     'wrap-iife': 'off',
     'object-curly-newline': 'off',
     'import/prefer-default-export': 'off',
