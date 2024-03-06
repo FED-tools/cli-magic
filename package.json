@@ -15,11 +15,12 @@
     "eslint-plugin-jest": "^27.2.3",
     "eslint-plugin-prettier": "^5.0.0",
     "lerna": "^7.1.4",
-    "prettier": "^3.0.1"
+    "prettier": "^3.0.1",
+    "nx": "16.10.0",
+    "nx-cloud": "latest"
   },
   "scripts": {
-    "start": "lerna run build,lint",
-    "inst": "lerna exec npm install",
+    "build": "npx lerna build",
     "deploy": "lerna publish --no-private --conventional-commits --yes",
     "debug": "",
     "lerna-dockerize": "lerna-dockerize",
@@ -30,7 +31,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "npmClient": "npm",
+  "npmClient": "yarn",
   "dependencies": {
     "@types/jest": "^29.5.3",
     "lerna-dockerize": "^1.0.9",

@@ -77,3 +77,8 @@ npx mgct update
 # Step 5 - (See commits list)
 npx mgct commits
 ```
+
+In root folder for this project you can find config.json file. Use that.
+Navigate to folder in CLI
+
+npx nx graph

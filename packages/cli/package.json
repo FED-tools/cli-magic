@@ -37,14 +37,14 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.22.10",
-    "@mgct/core": "^0.7.6",
+    "@mgct/core": "*",
     "@types/yargs": "^17.0.24",
     "await-exec": "^0.1.2",
     "lodash": "^4.17.21",
     "path": "^0.12.7",
+    "ts-jest": "^29.1.1",
     "winston": "^3.10.0",
-    "yargs": "^17.7.2",
-    "ts-jest": "^29.1.1"
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.10",
