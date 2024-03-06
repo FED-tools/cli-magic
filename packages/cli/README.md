@@ -78,7 +78,7 @@ npx mgct update
 npx mgct commits
 ```
 
+npx nx graph
+
 In root folder for this project you can find config.json file. Use that.
 Navigate to folder in CLI
-
-npx nx graph
