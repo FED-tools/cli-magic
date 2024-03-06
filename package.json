@@ -31,7 +31,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "npmClient": "yarn",
+  "npmClient": "npm",
   "dependencies": {
     "@types/jest": "^29.5.12",
     "ts-jest": "^29.1.2"
