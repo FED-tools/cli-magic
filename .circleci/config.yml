@@ -19,8 +19,8 @@ jobs:
             equal: [main, << pipeline.git.branch >>]
           steps:
             - run:
-                name: 'Install Yarn'
-                command: 'yarn install && yarn inst && yarn build && yarn deploy'
+                name: 'Install'
+                command: 'npm install && npm run inst && npm run build && npm run deploy'
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows

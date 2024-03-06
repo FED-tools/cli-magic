@@ -5,6 +5,6 @@
 ## Publishing
 
 1.  Push all changes to main
-2.  yarn inst
-3.  yarn build
-4.  yarn deploy
+2.  npm run inst
+3.  npm run build
+4.  npm run deploy
