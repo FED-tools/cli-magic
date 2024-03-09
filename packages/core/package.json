@@ -1,6 +1,6 @@
 {
   "name": "@mgct/core",
-  "version": "0.7.6",
+  "version": "0.7.8",
   "description": "MGCT - MaGiC Tool",
   "author": "Artem Deikun <artemhp@gmail.com>",
   "publishConfig": {
