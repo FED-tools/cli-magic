@@ -20,8 +20,8 @@
     "nx-cloud": "18.0.0"
   },
   "scripts": {
-    "build": "npx lerna build",
-    "deploy": "lerna publish --no-private --conventional-commits --yes",
+    "build": "npx lerna run build",
+    "deploy": "npx lerna run publish --no-private",
     "debug": "",
     "lerna-dockerize": "lerna-dockerize",
     "lint": "eslint .",
