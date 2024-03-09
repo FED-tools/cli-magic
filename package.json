@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "npx lerna run build",
-    "deploy": "npx lerna run publish --no-private",
+    "deploy": "npx lerna publish --no-private",
     "debug": "",
     "lerna-dockerize": "lerna-dockerize",
     "lint": "eslint .",
